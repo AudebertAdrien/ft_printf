@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 15:08:21 by motoko            #+#    #+#             */
-/*   Updated: 2023/03/02 11:22:33 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/03/02 13:56:32 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ int main (void)
 	printf("%s", "toto");
 	printf("\n");
 
-	ft_printf("%s", "toto");
+	ft_printf("%d", 49);
 	printf("\n");
-	printf("%s", "toto");
+	printf("%d", 49);
 	printf("\n");
 
 	return 0;

@@ -6,7 +6,7 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 11:06:57 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/03/02 11:22:06 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/03/02 13:55:32 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ int	ft_printf(const char *format, ...)
 				ft_putchar_fd(va_arg(arg_lst, int), 1);
 			if (*format == 's') 
 				ft_putstr_fd(va_arg(arg_lst, char *), 1);
-			if (*format == 'p') 
-				ft_putstr_fd(va_arg(arg_lst, void *), 1);
+			if (*format == 'd') 
+				ft_itoa(va_arg(arg_lst, int));
 		}
 		else {
 			ft_putchar_fd(*format, 1);

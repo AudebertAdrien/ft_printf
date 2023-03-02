@@ -6,8 +6,11 @@ DLEAK		= -fsanitize=address
 DEPS		= libft.h
 
 SRC		= main.c \
+		  ft_printf.c \
+		  ft_strlen.c \
 		  ft_putchar_fd.c \
-		  ft_putnbr_fd.c
+		  ft_putnbr_fd.c \
+		  ft_putstr_fd.c \
 
 all: $(NAME)
 

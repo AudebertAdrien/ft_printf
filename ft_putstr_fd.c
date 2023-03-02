@@ -1,34 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/01 15:08:21 by motoko            #+#    #+#             */
-/*   Updated: 2023/03/02 11:22:33 by aaudeber         ###   ########.fr       */
+/*   Created: 2023/02/13 16:23:25 by motoko            #+#    #+#             */
+/*   Updated: 2023/02/14 15:24:30 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int	ft_printf(const char *format, ...);
 
-int main (void)
+void	ft_putstr_fd(char *s, int fd)
 {
-	ft_printf("Hello %corld 202%i", 'W', 3);
-	printf("\n");
-	printf("Hello %corld 202%i", 'W', 3);
-	printf("\n");
-
-	ft_printf("%s", "toto");
-	printf("\n");
-	printf("%s", "toto");
-	printf("\n");
-
-	ft_printf("%s", "toto");
-	printf("\n");
-	printf("%s", "toto");
-	printf("\n");
-
-	return 0;
+	if (!s)
+		return ;
+	write(fd, s, ft_strlen(s));
 }

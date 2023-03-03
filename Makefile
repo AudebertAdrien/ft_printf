@@ -8,14 +8,9 @@ DEPS		= libft.h
 SRC		= main.c \
 		  ft_printf.c \
 		  ft_strlen.c \
-		  ft_putchar.c \
-		  ft_putchar_fd.c \
-		  ft_putnbr_fd.c \
-		  ft_putnbr_base.c \
-		  ft_putnbr.c \
-		  ft_putstr_fd.c \
-		  ft_putstr.c \
-		  ft_itoa.c \
+		  ft_putchar_i.c \
+		  ft_putnbr_int.c \
+		  ft_putnbr_base_unsigned.c \
 
 all: $(NAME)
 

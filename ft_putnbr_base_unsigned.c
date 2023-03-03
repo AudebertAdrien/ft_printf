@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*   ft_putnbr_base_unsigned.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 16:45:34 by motoko            #+#    #+#             */
-/*   Updated: 2023/03/02 16:48:13 by motoko           ###   ########.fr       */
+/*   Updated: 2023/03/03 14:48:07 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,22 +37,18 @@ int	is_error(char *base)
 	return (0);
 }
 
-void	ft_putnbr_base(int nbr, char *base)
+int	ft_putnbr_base_unsigned(unsigned int nbr, char *base, int count)
 {
 	unsigned int		base_l;
-	unsigned int		nb;
 
 	base_l = ft_strlen(base);
 	if (is_error(base))
-		return ;
-	if (nbr < 0)
+		return (0);
+	if (nbr > base_l)
 	{
-		nb = nbr * -1;
-		ft_putchar('-');
+		count += ft_putnbr_base_unsigned(nbr / base_l, base, count);
 	}
-	else
-		nb = nbr;
-	if (nb > base_l)
-		ft_putnbr_base(nb / base_l, base);
-	ft_putchar(base[nb % base_l]);
+	count += 1;
+	ft_putchar_i(base[nbr % base_l]);
+	return (count);
 }

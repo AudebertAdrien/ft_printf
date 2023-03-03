@@ -6,7 +6,7 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 11:06:57 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/03/03 09:12:14 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/03/03 14:47:50 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,21 +23,22 @@ int	ft_printf(const char *format, ...)
 		if (*format == '%') {
 			format++;
 			if (*format == '%' && *(format - 1) == '%')
-				ft_putchar('%');
+				count += ft_putchar_i('%');
+			
 			if (*format == 'i' || *format == 'd')
-				ft_putnbr(va_arg(arg_lst, int));
+				count += ft_putnbr_int(va_arg(arg_lst, int), 0);
 			if (*format == 'c')
-				ft_putchar(va_arg(arg_lst, int));
-			if (*format == 's') 
-				ft_putstr(va_arg(arg_lst, char *));
+				count += ft_putchar_i(va_arg(arg_lst, int));
+			//if (*format == 's') 
+			//	ft_putstr(va_arg(arg_lst, char *));
+
 			if (*format == 'x') 
-				ft_putnbr_base(va_arg(arg_lst, int), "0123456789abcdef");
+				count += ft_putnbr_base_unsigned(va_arg(arg_lst, unsigned int), "0123456789abcdef", 0);
 		}
 		else {
-			ft_putchar_fd(*format, 1);
+			count += ft_putchar_i(*format);
 		}
-		count++;
-		format++;	
+		format++;
 	}
 	va_end(arg_lst);
 	return (count);

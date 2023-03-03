@@ -6,7 +6,7 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 17:37:18 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/03/02 13:38:28 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/03/02 16:58:34 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,11 @@ void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
-// printf
+// Printf
 int	ft_print(const char *format, ...);
-void	ft_putfnbr_fd(long n, int fd);
+void	ft_putnbr_base(int nbr, char *base);
+void	ft_putnbr(int n);
+void	ft_putchar(char c);
+void	ft_putstr(char *s);
+
 #endif

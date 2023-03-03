@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 15:08:21 by motoko            #+#    #+#             */
-/*   Updated: 2023/03/03 14:42:45 by motoko           ###   ########.fr       */
+/*   Updated: 2023/03/03 17:55:42 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,13 @@ int main (void)
 	printf("\n%d", count);
 
 	printf("\n//////////////////\n");
+	
+	count = ft_printf("%d", 118);
+	printf("\n%d\n", count);
+	count = printf("%d", 118);
+	printf("\n%d", count);
+
+	printf("\n//////////////////\n");
 
 	count = ft_printf("Hello %corld", 'W');
 	printf("\n%d\n", count);
@@ -46,41 +53,28 @@ int main (void)
 	count = printf("%x", 42);
 	printf("\n%d", count);
 
-
 	printf("\n//////////////////\n");
 
-	count = ft_printf("%x", -500);
+	count = ft_printf("%X", -500);
 	printf("\n%d\n", count);
-	count = printf("%x", -500);
+	count = printf("%X", -500);
 	printf("\n%d", count);
 
+	printf("\n//////////////////\n");
 
+	char *addr = "ex";
+	count = ft_printf("%p", addr);
+	printf("\n%d\n", count);
+	count = printf("%p", addr);
+	printf("\n%d", count);
 
-	/*
 	printf("\n//////////////////\n");
 	
-		count = ft_printf("%s", "toto");
+	count = ft_printf("%s", "toto");
 	printf("\n%d\n", count);
 	count = printf("%s", "toto");
 	printf("\n%d", count);
 
 	printf("\n//////////////////\n");
-
-	ft_printf("%d", 49);
-	count = printf("\n%d\n", count);
-	printf("%d", 49);
-	count = printf("\n%d", count);
-
-	printf("\n//////////////////\n");
-	
-	count = ft_printf("%d", 118);
-	printf("\n%d\n", count);
-	count = printf("%d", 118);
-	printf("\n%d", count);
-	
-
-	printf("\n//////////////////\n");
-	printf("\n//////////////////\n");
-	*/
 	return 0;
 }

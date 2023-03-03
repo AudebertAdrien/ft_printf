@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 17:22:49 by motoko            #+#    #+#             */
-/*   Updated: 2023/03/03 15:48:09 by motoko           ###   ########.fr       */
+/*   Updated: 2023/03/03 17:17:15 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,7 @@ int	ft_printnbr_int(int n, int count)
 	else
 		s = n;
 	if (s > 9)
-	{
-		count += 1;
-		ft_printnbr_int(s / 10, count);
-	}
-	count += 1;
-	ft_printchar(s % 10 + 48);
+		count += ft_printnbr_int(s / 10, count);
+	count += ft_printchar(s % 10 + 48);
 	return (count);
 }

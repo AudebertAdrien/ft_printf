@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_printnbr_ptr.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/13 16:23:25 by motoko            #+#    #+#             */
-/*   Updated: 2023/03/02 16:51:25 by motoko           ###   ########.fr       */
+/*   Created: 2023/03/02 16:45:34 by motoko            #+#    #+#             */
+/*   Updated: 2023/03/03 17:20:36 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char *s)
+int	ft_printnbr_ptr(unsigned long nbr, char *base, int count)
 {
-	if (!s)
-		return ;
-	write(1, s, ft_strlen(s));
+	unsigned long		base_l;
+	
+	base_l = ft_strlen(base);
+	if (nbr > base_l)
+		count += ft_printnbr_ptr(nbr / base_l, base, count);
+	count += ft_printchar(base[nbr % base_l]);
+	return (count);
 }

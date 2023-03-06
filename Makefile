@@ -10,6 +10,7 @@ SRC			= ft_printf.c \
 		  		ft_printchar.c \
 		  		ft_printstr.c \
 		  		ft_printnbr_int.c \
+		  		ft_printnbr_unsigned.c \
 		  		ft_printnbr_base.c \
 		  		ft_printnbr_ptr.c \
 

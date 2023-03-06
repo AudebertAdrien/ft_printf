@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 16:45:34 by motoko            #+#    #+#             */
-/*   Updated: 2023/03/06 11:22:33 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/03/06 13:02:48 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int recurs(unsigned long nbr, char *base, int count)
 
 	base_l = ft_strlen(base);
 	if (nbr >= base_l)
-		count += recurs(nbr / base_l, base, count);
+		count = recurs(nbr / base_l, base, count);
 	count += ft_printchar(base[nbr % base_l]);
 	return (count);
 }

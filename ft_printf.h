@@ -6,7 +6,7 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 17:37:18 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/03/06 10:04:16 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/03/06 17:11:49 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 int	ft_printf(const char *format, ...);
 int	ft_printnbr_base(unsigned int nbr, char *base, int count);
 int	ft_printnbr_int(int n, int count);
+int	ft_printnbr_unsigned(size_t n, int count);
 int	ft_printnbr_ptr(unsigned long nbr, char *base, int count);
 int	ft_printchar(char c);
 int	ft_printstr(const char *c);

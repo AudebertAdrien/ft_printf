@@ -6,11 +6,11 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 11:06:57 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/03/03 18:07:14 by motoko           ###   ########.fr       */
+/*   Updated: 2023/03/06 11:17:10 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 int	ft_printf(const char *format, ...)
 {
@@ -35,10 +35,7 @@ int	ft_printf(const char *format, ...)
 			if (*format == 'X') 
 				count += ft_printnbr_base(va_arg(arg_lst, unsigned int), "0123456789ABCDEF", 0);
 			if (*format == 'p') 
-			{
-				count += write(1, "0x", 2);
 				count += ft_printnbr_ptr(va_arg(arg_lst, unsigned long), "0123456789abcdef", 0);
-			}
 		}
 		else {
 			count += ft_printchar(*format);

@@ -6,11 +6,11 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 15:08:21 by motoko            #+#    #+#             */
-/*   Updated: 2023/03/03 17:55:42 by motoko           ###   ########.fr       */
+/*   Updated: 2023/03/06 11:19:07 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 int main (void)
 {
@@ -62,7 +62,11 @@ int main (void)
 
 	printf("\n//////////////////\n");
 
-	char *addr = "ex";
+	//char *addr = "ex";
+	void *addr;
+	addr = 0;
+	addr = (void *)123;
+	printf("p :\n");
 	count = ft_printf("%p", addr);
 	printf("\n%d\n", count);
 	count = printf("%p", addr);

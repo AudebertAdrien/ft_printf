@@ -6,11 +6,11 @@
 /*   By: aaudeber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 14:23:17 by aaudeber          #+#    #+#             */
-/*   Updated: 2023/02/13 19:41:16 by motoko           ###   ########.fr       */
+/*   Updated: 2023/03/06 10:05:40 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 int	count_number(int n)
 {

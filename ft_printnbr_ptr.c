@@ -6,16 +6,11 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 16:45:34 by motoko            #+#    #+#             */
-/*   Updated: 2023/03/06 13:02:48 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/03/07 11:22:23 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-int print_prefix(void)
-{
-	return (ft_printstr("0x"));		
-}
 
 int recurs(unsigned long nbr, char *base, int count)
 {
@@ -34,8 +29,9 @@ int	ft_printnbr_ptr(unsigned long nbr, char *base, int count)
 		return (ft_printstr("(nil)"));
 	else
 	{
-		count += print_prefix();
+		count += ft_printstr("0x");
 		count += recurs(nbr, base, 0);
+
 	}
 	return (count);
 }

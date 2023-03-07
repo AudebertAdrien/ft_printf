@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 16:45:34 by motoko            #+#    #+#             */
-/*   Updated: 2023/03/07 13:25:37 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/03/07 14:13:11 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@ static int	ft_processes_base(unsigned int nbr, char *base, int count)
 	base_l = ft_strlen(base);
 	if (nbr >= base_l)
 		count = ft_processes_base(nbr / base_l, base, count);
-	if (nbr < 10)
-		count += ft_printchar(base[nbr % base_l]);
+	count += ft_printchar(base[nbr % base_l]);
 	return (count);
 }
 

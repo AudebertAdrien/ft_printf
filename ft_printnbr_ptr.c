@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 16:45:34 by motoko            #+#    #+#             */
-/*   Updated: 2023/03/07 13:33:03 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/03/07 13:48:00 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,9 @@ static int	ft_processes_base(unsigned long nbr, char *base, int count)
 
 int	ft_printnbr_ptr(unsigned long nbr)
 {	
+	int	count;
+
+	count = 0;
 	if (nbr == 0)
 		return (ft_printstr("(nil)"));
 	else

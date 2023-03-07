@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 17:22:49 by motoko            #+#    #+#             */
-/*   Updated: 2023/03/06 13:04:22 by aaudeber         ###   ########.fr       */
+/*   Updated: 2023/03/07 13:32:22 by aaudeber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_printnbr_int(int n, int count)
 {
-	unsigned int s;
+	unsigned int	s;
 
 	if (n < 0)
 	{

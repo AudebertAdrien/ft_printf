@@ -2,7 +2,6 @@ NAME		= libftprintf.a
 
 CC			= gcc
 CFLAGS		= -Wall -Wextra -Werror
-DLEAK		= -fsanitize=address
 DEPS		= ft_printf.h
 
 SRC			= ft_printf.c \

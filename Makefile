@@ -2,7 +2,6 @@ NAME		= libftprintf.a
 
 CC			= gcc
 CFLAGS		= -Wall -Wextra -Werror
-DEPS		= ft_printf.h
 
 SRC			= ft_printf.c \
 		  		ft_strlen.c \
@@ -16,7 +15,7 @@ SRC			= ft_printf.c \
 OBJS		= $(SRC:.c=.o)
 
 .c.o:
-	$(CC) $(CFLAGS) -I.$(DEPS) -c $< -o $@
+	$(CC) $(CFLAGS) -I ./include -c $< -o $@
 
 all: $(NAME)
 
@@ -27,7 +26,7 @@ clean:
 	rm -f $(OBJS)
 
 fclean: clean
-	rm -f $(NAME) a.out
+	rm -f $(NAME)
 
 re: fclean all
 
